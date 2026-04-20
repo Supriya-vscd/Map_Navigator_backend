@@ -32,7 +32,7 @@ app.use((err, _req, res, _next) => {
   res.status(500).json({ error: 'Internal server error', details: err.message });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n🗺️  Map Navigator API running on http://localhost:${PORT}`);
   console.log(`   GET /api/geocode?q=<address>`);
   console.log(`   GET /api/route?start=lat,lng&end=lat,lng\n`);
